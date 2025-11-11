@@ -1,0 +1,26 @@
+package sujal;
+
+public class Sujal {
+
+    int id;
+    String name;
+    int speed;
+
+    Sujal(int id, String name) {
+        this.id = id;
+        this.name = name;
+        System.out.println("Bike ID = " + id + "  Bike Name = " + name);
+    }
+
+    Sujal(int id, String name, int speed) {
+        this.id = id;
+        this.name = name;
+        this.speed = speed;
+        System.out.println("Bike ID = " + id + "  Bike Name = " + name + "  Speed = " + speed + " km/h");
+    }
+
+    public static void main(String[] args) {
+        Sujal S1 = new Sujal(101, "Yamaha");
+        Sujal S2 = new Sujal(102, "Honda", 120);
+    }
+}

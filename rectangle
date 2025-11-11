@@ -1,0 +1,48 @@
+
+package sujal;
+import java.util.Scanner;
+
+public class Sujal {
+	int l,w;
+	String colour ;
+	Scanner ab= new Scanner(System.in);
+	
+	void get_length()
+	{
+		l= ab.nextInt();
+	}
+	void get_width()
+	{
+		w=ab.nextInt();
+	}
+	void get_colour()
+	{
+		colour=ab.next();
+	}
+	int find_area()
+	{
+		return(l*w);
+	}
+
+       public static void main(String[] args) {
+    	  Sujal S1 = new Sujal();
+    	  Sujal S2 = new Sujal();
+    	  System.out.println("enter the l,b of 1st rectangle");
+    	  S1.get_length();
+    	  S1.get_width();
+    	  S1.get_colour();
+    	  
+    	  System.out.println("enter the l,b of 2nd rectangle");
+    	  S2.get_length();
+    	  S2.get_width();
+    	  S2.get_colour();
+    	  
+    	  if (S1.l == S2.l && S1.w == S2.w && S1.colour.equals(S2.colour))
+    		  System.out.println("matchng react");
+    		  else
+    			  System.out.println("non-matching rect");
+    			  
+    	  
+
+       }
+}

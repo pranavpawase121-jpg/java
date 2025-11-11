@@ -1,0 +1,85 @@
+package sujal;
+import java.util.Scanner;
+
+public class Sujal {
+
+    float a, b;
+
+  
+    public void getFirstNo() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the 1st value: ");
+        a = in.nextFloat();
+    }
+
+
+    public void getSecondNo() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the 2nd value: ");
+        b = in.nextFloat();
+    }
+
+ 
+    public float add() {
+        return (a + b);
+    }
+
+
+    public float sub() {
+        return (a - b);
+    }
+
+  
+    public float mul() {
+        return (a * b);
+    }
+
+
+    public float div() {
+        return (a / b);
+    }
+
+    public static void main(String[] args) {
+
+        Sujal ob = new Sujal();
+        Scanner obj = new Scanner(System.in);
+        int ch;
+
+        ob.getFirstNo();
+        ob.getSecondNo();
+
+        do {
+    
+            System.out.println("\nMENU: 1.Add  2.Sub  3.Divide  4.Multiply  5.Exit");
+            System.out.print("Enter your choice: ");
+            ch = obj.nextInt();
+
+            switch (ch) {
+
+                case 1:
+                    System.out.println("Addition = " + ob.add());
+                    break;
+
+                case 2:
+                    System.out.println("Subtraction = " + ob.sub());
+                    break;
+
+                case 3:
+                    System.out.println("Division = " + ob.div());
+                    break;
+
+                case 4:
+                    System.out.println("Multiplication = " + ob.mul());
+                    break;
+
+                case 5:
+                    System.out.println("Thank you!");
+                    break;
+
+                default:
+                    System.out.println("Wrong choice...");
+            }
+
+        } while (ch != 5);
+    }
+}

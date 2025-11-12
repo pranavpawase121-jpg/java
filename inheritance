@@ -1,0 +1,39 @@
+package sujal;
+
+public class Sujal {
+    String name;
+
+    void show() {
+        System.out.println("Player Name: " + name);
+    }
+
+    public static void main(String[] args) {
+
+        Cricket_player c1 = new Cricket_player();
+        Football_player f1 = new Football_player();
+        Hockey_player h1 = new Hockey_player();
+
+        c1.show();
+        f1.show();
+        h1.show();
+    }
+}
+
+class Cricket_player extends Sujal {
+    Cricket_player() {
+        name = "Cricket Player";
+    }
+}
+
+class Football_player extends Sujal {
+    Football_player() {
+        name = "Football Player";
+    }
+}
+
+class Hockey_player extends Sujal {
+    Hockey_player() {
+        name = "Hockey Player";
+    }
+}
+
